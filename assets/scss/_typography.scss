@@ -1,0 +1,151 @@
+@mixin typography-h1 {
+  @apply font-alegreya font-black text-text-primary;
+
+  // Адаптивные размеры через Tailwind значения
+  font-size: theme('fontSize.h1-mobile.0');
+  line-height: theme('fontSize.h1-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.h1-tablet.0');
+    line-height: theme('fontSize.h1-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.h1-desktop.0');
+    line-height: theme('fontSize.h1-desktop.1.lineHeight');
+  }
+
+  letter-spacing: -0.5px;
+}
+
+@mixin typography-h2 {
+  @apply font-alegreya font-black text-text-primary;
+
+  font-size: theme('fontSize.h2-mobile.0');
+  line-height: theme('fontSize.h2-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.h2-tablet.0');
+    line-height: theme('fontSize.h2-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.h2-desktop.0');
+    line-height: theme('fontSize.h2-desktop.1.lineHeight');
+  }
+
+  letter-spacing: -0.25px;
+}
+
+@mixin typography-h3 {
+  @apply font-alegreya font-extrabold text-text-primary;
+
+  font-size: theme('fontSize.h3-mobile.0');
+  line-height: theme('fontSize.h3-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.h3-tablet.0');
+    line-height: theme('fontSize.h3-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.h3-desktop.0');
+    line-height: theme('fontSize.h3-desktop.1.lineHeight');
+  }
+}
+
+@mixin typography-h4 {
+  @apply font-alegreya font-extrabold text-text-primary;
+
+  font-size: theme('fontSize.h4-mobile.0');
+  line-height: theme('fontSize.h4-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.h4-tablet.0');
+    line-height: theme('fontSize.h4-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.h4-desktop.0');
+    line-height: theme('fontSize.h4-desktop.1.lineHeight');
+  }
+}
+
+@mixin typography-accent {
+  @apply font-roboto font-normal text-text-primary;
+
+  font-size: theme('fontSize.accent-mobile.0');
+  line-height: theme('fontSize.accent-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.accent-tablet.0');
+    line-height: theme('fontSize.accent-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.accent-desktop.0');
+    line-height: theme('fontSize.accent-desktop.1.lineHeight');
+  }
+}
+
+@mixin typography-paragraph {
+  @apply font-roboto font-normal text-text-primary;
+
+  font-size: theme('fontSize.p-mobile.0');
+  line-height: theme('fontSize.p-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.p-tablet.0');
+    line-height: theme('fontSize.p-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.p-desktop.0');
+    line-height: theme('fontSize.p-desktop.1.lineHeight');
+  }
+}
+
+@mixin typography-description {
+  @apply font-roboto font-normal text-text-secondary;
+
+  font-size: theme('fontSize.description-mobile.0');
+  line-height: theme('fontSize.description-mobile.1.lineHeight');
+
+  @media (min-width: theme('screens.md')) {
+    font-size: theme('fontSize.description-tablet.0');
+    line-height: theme('fontSize.description-tablet.1.lineHeight');
+  }
+
+  @media (min-width: theme('screens.lg')) {
+    font-size: theme('fontSize.description-desktop.0');
+    line-height: theme('fontSize.description-desktop.1.lineHeight');
+  }
+}
+
+.typography-h1 {
+  @include typography-h1;
+}
+
+.typography-h2 {
+  @include typography-h2;
+}
+
+.typography-h3 {
+  @include typography-h3;
+}
+
+.typography-h4 {
+  @include typography-h4;
+}
+
+.typography-accent {
+  @include typography-accent;
+}
+
+.typography-paragraph {
+  @include typography-paragraph;
+}
+
+.typography-description {
+  @include typography-description;
+}

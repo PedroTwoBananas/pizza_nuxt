@@ -1,0 +1,15 @@
+# .eslintignore
+.nuxt
+.output
+dist
+node_modules
+*.min.js
+coverage
+*.log
+*.md
+*.svg
+*.jpg
+*.png
+public/
+Dockerfile
+docker-compose.yml
