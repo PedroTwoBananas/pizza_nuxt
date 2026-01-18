@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import Logo from './ui/logo/Logo.vue';
   import NavTab from './ui/nav-tab/NavTab.vue';
   import TabItem from './ui/tab-item/TabItem.vue';
 
@@ -28,11 +29,7 @@
     <div class="responsive-container py-3 md:py-4 lg:py-10">
       <div class="flex items-center justify-between">
         <NuxtLink to="/" class="flex items-center space-x-2">
-          <img
-            class="object-contain w-auto h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20"
-            src="/public/logo.svg"
-            alt="Pizza Menu"
-          />
+          <Logo color="black" class="object-contain w-auto h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20" />
         </NuxtLink>
         <nav class="hidden lg:flex items-center gap-16">
           <NavTab href="#menu" title="Меню" />

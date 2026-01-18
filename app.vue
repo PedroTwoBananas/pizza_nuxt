@@ -8,5 +8,6 @@
     <Header />
     <Description />
     <About />
+    <Footer />
   </div>
 </template>
