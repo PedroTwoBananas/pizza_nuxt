@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-row md:flex-col lg:flex-row items-start lg:items-center gap-6 rounded-md bg-white shadow-[0_2px_5px_0_#C7C1A84D] p-6 md:p-8 lg:p-8 w-full h-full min-h-[180px] md:min-h-[240px] lg:min-h-[220px]"
-  >
+  <div class="card flex flex-row md:flex-col lg:flex-row items-start lg:items-center gap-6">
     <div class="relative w-12 h-12 md:w-14 md:h-14 lg:w-20 lg:h-20 flex-shrink-0">
       <img :alt="alt" class="object-contain w-full h-full" :src="image" />
     </div>
@@ -32,3 +30,25 @@
     },
   });
 </script>
+
+<style scoped lang="scss">
+  .card {
+    border-radius: 0.375rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgba(199, 193, 168, 0.3);
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+      min-height: 240px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 2rem;
+      min-height: 220px;
+    }
+  }
+</style>
