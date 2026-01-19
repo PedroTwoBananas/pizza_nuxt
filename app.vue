@@ -18,7 +18,7 @@
     const existingIndex = selectedPizzas.value.findIndex((item) => item.id === cartPizza.id);
 
     if (existingIndex !== -1) {
-      selectedPizzas.value[existingIndex].quantity += 1;
+      selectedPizzas.value[existingIndex]!.quantity += 1;
     } else {
       selectedPizzas.value.push(cartPizza);
     }
