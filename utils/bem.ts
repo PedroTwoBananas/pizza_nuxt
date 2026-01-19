@@ -10,7 +10,6 @@ export function createBem(blockName: string, styles: Record<string, string>) {
       key = `${blockName}_${modifier}`;
     }
 
-    // Разделяем классы если их несколько
     return key
       .split(' ')
       .map((k) => styles[k] || '')

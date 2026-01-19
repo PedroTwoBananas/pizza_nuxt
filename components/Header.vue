@@ -3,6 +3,15 @@
   import NavTab from './ui/nav-tab/NavTab.vue';
   import TabItem from './ui/tab-item/TabItem.vue';
 
+  interface Emits {
+    (e: 'open'): void;
+  }
+  const emit = defineEmits<Emits>();
+
+  const handleOpen = () => {
+    emit('open');
+  };
+
   const isScrolled = ref(false);
 
   const handleScroll = () => {
@@ -20,7 +29,7 @@
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 w-full bg-white z-50 transition-all duration-300">
+  <header class="fixed top-0 left-0 w-full bg-white z-[50] transition-all duration-300">
     <div
       class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#A5A9B04D] to-[#A5A9B04D] transition-transform duration-300 transform origin-left"
       :class="{ 'scale-x-100': isScrolled, 'scale-x-0': !isScrolled }"
@@ -44,12 +53,7 @@
               title="+7 (918) 432-65-87"
               subtitle="Ежедневно с 9:00 до 23:00"
             />
-            <TabItem
-              href="/"
-              image="/pizza.svg"
-              title="Ваш заказ"
-              subtitle="Итальянская и ещё 2 пиццы"
-            />
+            <TabItem @click="handleOpen" href="/" image="/pizza.svg" title="Ваш заказ" />
           </div>
           <div class="flex md:gap-8">
             <button

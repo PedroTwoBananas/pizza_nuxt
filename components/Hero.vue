@@ -11,7 +11,7 @@
     >
       <div class="flex items-center md:items-start flex-col gap-3">
         <span class="typography-h1"> Пицца на заказ </span>
-        <span class="typography-accent text-center">
+        <span class="typography-accent text-center md:text-start">
           Бесплатная и быстрая доставка за час в любое удобное для вас время
         </span>
       </div>
